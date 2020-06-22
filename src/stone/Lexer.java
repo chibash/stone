@@ -86,7 +86,7 @@ public class Lexer {
         for (int i = 1; i < len; i++) {
             char c = s.charAt(i);
             if (c == '\\' && i + 1 < len) {
-                int c2 = s.charAt(i + 1);
+                char c2 = s.charAt(i + 1);
                 if (c2 == '"' || c2 == '\\')
                     c = s.charAt(++i);
                 else if (c2 == 'n') {
