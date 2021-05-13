@@ -248,6 +248,7 @@ public class Parser {
             if (f == null)
                 f = new Factory() {
                     protected ASTree make0(Object arg) throws Exception {
+                        @SuppressWarnings("unchecked")
                         List<ASTree> results = (List<ASTree>)arg;
                         if (results.size() == 1)
                             return results.get(0);

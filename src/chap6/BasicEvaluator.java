@@ -46,7 +46,7 @@ import java.util.List;
         public Object eval(Environment env) {
             Object v = ((ASTreeEx)operand()).eval(env);
             if (v instanceof Integer)
-                return new Integer(-((Integer)v).intValue());
+                return Integer.valueOf(-((Integer)v).intValue());
             else
                 throw new StoneException("bad type for -", this);
         }
